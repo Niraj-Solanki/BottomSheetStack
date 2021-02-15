@@ -63,7 +63,7 @@ extension WorldExpoController : UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.size.width - 30, height: 200)
+        return CGSize(width: self.view.frame.size.width - 40, height: 200)
     }
     
 }

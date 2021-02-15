@@ -19,8 +19,8 @@ class ExpoHistoryCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        eventImageView.layer.borderWidth = 1
-        eventImageView.layer.borderColor = #colorLiteral(red: 0.1242638305, green: 0.1330408752, blue: 0.2081691623, alpha: 1)
+        eventImageView.layer.borderWidth = 0.5
+        eventImageView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
     
     //MARK:- Custom Methods

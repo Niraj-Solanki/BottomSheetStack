@@ -80,6 +80,13 @@
                                 <outlet property="delegate" destination="-1" id="Z77-9f-sEO"/>
                             </connections>
                         </collectionView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="route" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-zZ-TAr">
+                            <rect key="frame" x="20" y="10" width="100" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="gEn-SA-guP"/>
+                                <constraint firstAttribute="height" constant="70" id="quS-nh-BxG"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -94,6 +101,7 @@
                         <constraint firstAttribute="trailing" secondItem="Jfs-r0-2Gw" secondAttribute="trailing" id="TE2-iI-RSW"/>
                         <constraint firstItem="hdV-2C-nyk" firstAttribute="top" secondItem="kbn-au-n6W" secondAttribute="top" constant="30" id="WQA-Gx-imJ"/>
                         <constraint firstAttribute="trailing" secondItem="AAA-NS-hcu" secondAttribute="trailing" constant="20" id="eRS-ok-zRK"/>
+                        <constraint firstItem="uVz-zZ-TAr" firstAttribute="top" secondItem="kbn-au-n6W" secondAttribute="top" constant="10" id="ei8-nD-FXq"/>
                         <constraint firstItem="xgc-FH-1hz" firstAttribute="top" secondItem="6nf-Oy-JfI" secondAttribute="bottom" constant="20" id="gAu-AJ-Uyc"/>
                         <constraint firstItem="3Gb-p8-xyD" firstAttribute="leading" secondItem="kbn-au-n6W" secondAttribute="leading" constant="20" id="hf3-ZL-nSF"/>
                         <constraint firstItem="3Gb-p8-xyD" firstAttribute="top" secondItem="hdV-2C-nyk" secondAttribute="bottom" constant="40" id="hiy-Ru-7JR"/>
@@ -102,6 +110,7 @@
                         <constraint firstAttribute="bottom" secondItem="Jfs-r0-2Gw" secondAttribute="bottom" id="okw-Tz-QVv"/>
                         <constraint firstItem="hdV-2C-nyk" firstAttribute="centerX" secondItem="kbn-au-n6W" secondAttribute="centerX" id="rSi-XF-BIk"/>
                         <constraint firstItem="xgc-FH-1hz" firstAttribute="leading" secondItem="kbn-au-n6W" secondAttribute="leading" id="tjM-4n-hv1"/>
+                        <constraint firstItem="uVz-zZ-TAr" firstAttribute="leading" secondItem="kbn-au-n6W" secondAttribute="leading" constant="20" id="uon-8f-wxU"/>
                     </constraints>
                 </view>
             </subviews>
@@ -117,6 +126,7 @@
         </view>
     </objects>
     <resources>
+        <image name="route" width="1200" height="1200"/>
         <namedColor name="NG100">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

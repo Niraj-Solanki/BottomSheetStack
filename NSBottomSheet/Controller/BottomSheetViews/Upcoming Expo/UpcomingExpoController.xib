@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,50 +19,45 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngR-Kv-uGo">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Too Dubai" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-lV-Bg6">
-                            <rect key="frame" x="20" y="50" width="374" height="33.5"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Expo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-lV-Bg6">
+                            <rect key="frame" x="20" y="30" width="374" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                             <color key="textColor" name="NG100"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-zn-CT1">
-                            <rect key="frame" x="20" y="792" width="374" height="50"/>
-                            <color key="backgroundColor" red="0.84705882349999995" green="0.27450980390000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.2784313725" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="O0I-IA-Fdz"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                            <state key="normal" title="Bucket List 2022">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Pavilions">
                                 <color key="titleColor" name="NG100"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="2LF-4v-nCE"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" name="NG800"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="sF6-zn-CT1" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" constant="20" id="AZa-a7-PYl"/>
-                        <constraint firstAttribute="bottom" secondItem="sF6-zn-CT1" secondAttribute="bottom" constant="20" id="BVo-Z3-3qg"/>
                         <constraint firstItem="MSw-lV-Bg6" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" constant="20" id="HQf-Wc-Hbo"/>
-                        <constraint firstItem="MSw-lV-Bg6" firstAttribute="top" secondItem="ngR-Kv-uGo" secondAttribute="top" constant="50" id="JB9-Ds-ehV"/>
+                        <constraint firstItem="MSw-lV-Bg6" firstAttribute="top" secondItem="ngR-Kv-uGo" secondAttribute="top" constant="30" id="JB9-Ds-ehV"/>
                         <constraint firstItem="MSw-lV-Bg6" firstAttribute="centerX" secondItem="ngR-Kv-uGo" secondAttribute="centerX" id="byC-0y-bTf"/>
+                        <constraint firstAttribute="trailing" secondItem="sF6-zn-CT1" secondAttribute="trailing" id="iZ2-IE-kdd"/>
+                        <constraint firstItem="sF6-zn-CT1" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" id="kNt-Wb-NGZ"/>
                         <constraint firstAttribute="trailing" secondItem="MSw-lV-Bg6" secondAttribute="trailing" constant="20" id="t2H-H2-0ns"/>
-                        <constraint firstAttribute="trailing" secondItem="sF6-zn-CT1" secondAttribute="trailing" constant="20" id="y5k-2k-dGg"/>
+                        <constraint firstAttribute="bottom" secondItem="sF6-zn-CT1" secondAttribute="bottom" id="tR9-Za-yrC"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="ngR-Kv-uGo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MCG-KN-tqD"/>
+                <constraint firstItem="ngR-Kv-uGo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QCP-9C-ceM"/>
                 <constraint firstItem="ngR-Kv-uGo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sso-NS-eu7"/>
                 <constraint firstAttribute="trailing" secondItem="ngR-Kv-uGo" secondAttribute="trailing" id="ezU-oK-isn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ngR-Kv-uGo" secondAttribute="bottom" id="xpj-Ow-3pg"/>
@@ -75,11 +69,5 @@
         <namedColor name="NG100">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="NG800">
-            <color red="0.20399999618530273" green="0.28600001335144043" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -97,6 +97,7 @@ class BottomSheetContainer: UIViewController {
             bottomSheetArray[currentViewIndex - 1].state = .collapsed
             updateUI(bottomSheet: previousBottomSheet)
         }
+        bottomSheet.state = .expended
     }
     
     func present() {
@@ -122,7 +123,7 @@ class BottomSheetContainer: UIViewController {
         //Presenting Animation
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.view.frame = self?.presentFrameValue() ?? .zero
-            self?.backgroundView.backgroundColor = #colorLiteral(red: 0.1411764706, green: 0.2117647059, blue: 0.2823529412, alpha: 0.7501484448)
+            self?.backgroundView.backgroundColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 0.5)
         }
     }
     

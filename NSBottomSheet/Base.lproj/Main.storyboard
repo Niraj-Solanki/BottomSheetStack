@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-F9-Lz8">
-                                <rect key="frame" x="159" y="438" width="96" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AA-Cp-2aF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World's fair" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFU-3P-W22">
+                                        <rect key="frame" x="20" y="17.5" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <color key="textColor" name="NG800"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Oe3-4L-03A"/>
+                                    <constraint firstItem="jFU-3P-W22" firstAttribute="leading" secondItem="5AA-Cp-2aF" secondAttribute="leading" constant="20" id="P9B-yU-lAf"/>
+                                    <constraint firstAttribute="trailing" secondItem="jFU-3P-W22" secondAttribute="trailing" constant="20" id="epP-aY-GH5"/>
+                                    <constraint firstItem="jFU-3P-W22" firstAttribute="centerY" secondItem="5AA-Cp-2aF" secondAttribute="centerY" id="tzJ-U0-q12"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0I-G4-gbu">
+                                <rect key="frame" x="20" y="142" width="374" height="115"/>
+                                <string key="text">A world's fair or world fair is a large international exhibition designed to showcase achievements of nations. These exhibitions vary in character and are held in different parts of the world at a specific site for a period of time, ranging usually from three to six months</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="NG700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-F9-Lz8">
+                                <rect key="frame" x="115" y="554" width="209" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Explore World"/>
                                 <connections>
                                     <action selector="exploreWorldAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSS-QE-LnC"/>
@@ -25,19 +52,29 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E2d-F9-Lz8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Fsf-vd-zfp"/>
-                            <constraint firstItem="E2d-F9-Lz8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qBX-GD-ch5"/>
+                            <constraint firstItem="5AA-Cp-2aF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6AU-so-4KY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5AA-Cp-2aF" secondAttribute="trailing" id="Ji9-Qh-GUc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U0I-G4-gbu" secondAttribute="trailing" constant="20" id="Mdj-dI-kvc"/>
+                            <constraint firstItem="5AA-Cp-2aF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gER-BA-NGm"/>
+                            <constraint firstItem="U0I-G4-gbu" firstAttribute="top" secondItem="5AA-Cp-2aF" secondAttribute="bottom" constant="30" id="hJH-3h-Mh6"/>
+                            <constraint firstItem="U0I-G4-gbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p9k-o2-yPR"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="78"/>
+            <point key="canvasLocation" x="-59.420289855072468" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="NG700">
+            <color red="0.29399999976158142" green="0.37999999523162842" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NG800">
+            <color red="0.20399999618530273" green="0.28600001335144043" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

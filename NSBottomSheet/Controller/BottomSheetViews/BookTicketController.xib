@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,51 +19,56 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-gt-5Kc">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Too Dubai" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-dg-oon">
-                            <rect key="frame" x="20" y="50" width="374" height="33.5"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Tickets" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-dg-oon">
+                            <rect key="frame" x="20" y="30" width="374" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                             <color key="textColor" name="NG100"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dh-Bg-p5e">
-                            <rect key="frame" x="20" y="792" width="374" height="50"/>
-                            <color key="backgroundColor" red="0.84705882349999995" green="0.27450980390000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.2784313725" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="jLm-f3-1V5"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                            <state key="normal" title="Bucket List 2022">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Close">
                                 <color key="titleColor" name="NG100"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ZO2-8Z-nj8"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDZ-pm-Zxh">
+                            <rect key="frame" x="20" y="96.5" width="374" height="90"/>
+                            <string key="text">We have put a hold on selling tickets for Expo 2020 for the moment. We will let you know when tickets are available for the new dates (1 October 2021 to 31 March 2022), and look forward to welcoming you next year.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="NG300"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" name="NG900"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="0Dh-Bg-p5e" secondAttribute="bottom" constant="20" id="0K1-Hu-9H1"/>
-                        <constraint firstAttribute="trailing" secondItem="0Dh-Bg-p5e" secondAttribute="trailing" constant="20" id="6RG-qR-P1a"/>
+                        <constraint firstAttribute="bottom" secondItem="0Dh-Bg-p5e" secondAttribute="bottom" id="0K1-Hu-9H1"/>
+                        <constraint firstItem="DDZ-pm-Zxh" firstAttribute="top" secondItem="1pA-dg-oon" secondAttribute="bottom" constant="40" id="1rX-9w-LpK"/>
+                        <constraint firstAttribute="trailing" secondItem="0Dh-Bg-p5e" secondAttribute="trailing" id="6RG-qR-P1a"/>
                         <constraint firstAttribute="trailing" secondItem="1pA-dg-oon" secondAttribute="trailing" constant="20" id="EM5-fC-Rqd"/>
                         <constraint firstItem="1pA-dg-oon" firstAttribute="leading" secondItem="MCF-gt-5Kc" secondAttribute="leading" constant="20" id="U3d-bb-CFY"/>
-                        <constraint firstItem="0Dh-Bg-p5e" firstAttribute="leading" secondItem="MCF-gt-5Kc" secondAttribute="leading" constant="20" id="hPE-gY-xAV"/>
-                        <constraint firstItem="1pA-dg-oon" firstAttribute="top" secondItem="MCF-gt-5Kc" secondAttribute="top" constant="50" id="nbG-Vl-XRE"/>
+                        <constraint firstItem="0Dh-Bg-p5e" firstAttribute="leading" secondItem="MCF-gt-5Kc" secondAttribute="leading" id="hPE-gY-xAV"/>
+                        <constraint firstItem="1pA-dg-oon" firstAttribute="top" secondItem="MCF-gt-5Kc" secondAttribute="top" constant="30" id="nbG-Vl-XRE"/>
                         <constraint firstItem="1pA-dg-oon" firstAttribute="centerX" secondItem="MCF-gt-5Kc" secondAttribute="centerX" id="uyT-bj-fcQ"/>
+                        <constraint firstItem="DDZ-pm-Zxh" firstAttribute="leading" secondItem="MCF-gt-5Kc" secondAttribute="leading" constant="20" id="y8D-SY-vf8"/>
+                        <constraint firstAttribute="trailing" secondItem="DDZ-pm-Zxh" secondAttribute="trailing" constant="20" id="yuR-Ui-6Ef"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MCF-gt-5Kc" secondAttribute="bottom" id="VgR-Te-7Xn"/>
-                <constraint firstItem="MCF-gt-5Kc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fTO-64-hgs"/>
+                <constraint firstItem="MCF-gt-5Kc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Xml-ee-EhE"/>
                 <constraint firstItem="MCF-gt-5Kc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="k0a-yB-IYy"/>
                 <constraint firstAttribute="trailing" secondItem="MCF-gt-5Kc" secondAttribute="trailing" id="vkY-Vz-xcy"/>
             </constraints>
@@ -75,11 +79,8 @@
         <namedColor name="NG100">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="NG900">
-            <color red="0.14100000262260437" green="0.21199999749660492" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="NG300">
+            <color red="0.88999998569488525" green="0.91399997472763062" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,53 +19,48 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-EH-cd6">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Too Dubai" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsV-cd-NXi">
-                            <rect key="frame" x="20" y="50" width="374" height="33.5"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                            <color key="textColor" name="NG100"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pavilions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsV-cd-NXi">
+                            <rect key="frame" x="20" y="30" width="374" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                            <color key="textColor" name="NG900"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPh-5x-8rb">
-                            <rect key="frame" x="20" y="792" width="374" height="50"/>
-                            <color key="backgroundColor" red="0.84705882349999995" green="0.27450980390000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.2784313725" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="pJM-r4-5xm"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                            <state key="normal" title="Bucket List 2022">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Book Tickets">
                                 <color key="titleColor" name="NG100"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="JAC-fe-Tw5"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="OsV-cd-NXi" firstAttribute="top" secondItem="eiT-EH-cd6" secondAttribute="top" constant="50" id="Ixb-w6-KD6"/>
-                        <constraint firstAttribute="trailing" secondItem="GPh-5x-8rb" secondAttribute="trailing" constant="20" id="LZe-Y4-X8g"/>
+                        <constraint firstItem="OsV-cd-NXi" firstAttribute="top" secondItem="eiT-EH-cd6" secondAttribute="top" constant="30" id="Ixb-w6-KD6"/>
+                        <constraint firstAttribute="trailing" secondItem="GPh-5x-8rb" secondAttribute="trailing" id="LZe-Y4-X8g"/>
                         <constraint firstItem="OsV-cd-NXi" firstAttribute="leading" secondItem="eiT-EH-cd6" secondAttribute="leading" constant="20" id="d0N-tH-MsL"/>
-                        <constraint firstAttribute="bottom" secondItem="GPh-5x-8rb" secondAttribute="bottom" constant="20" id="itZ-Xc-9nF"/>
+                        <constraint firstAttribute="bottom" secondItem="GPh-5x-8rb" secondAttribute="bottom" id="itZ-Xc-9nF"/>
                         <constraint firstItem="OsV-cd-NXi" firstAttribute="centerX" secondItem="eiT-EH-cd6" secondAttribute="centerX" id="jLD-u6-O9J"/>
-                        <constraint firstItem="GPh-5x-8rb" firstAttribute="leading" secondItem="eiT-EH-cd6" secondAttribute="leading" constant="20" id="tl4-uG-7xJ"/>
+                        <constraint firstItem="GPh-5x-8rb" firstAttribute="leading" secondItem="eiT-EH-cd6" secondAttribute="leading" id="tl4-uG-7xJ"/>
                         <constraint firstAttribute="trailing" secondItem="OsV-cd-NXi" secondAttribute="trailing" constant="20" id="uR2-oO-q5I"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eiT-EH-cd6" secondAttribute="bottom" id="EL1-yv-Db5"/>
                 <constraint firstItem="eiT-EH-cd6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I7R-qK-O45"/>
                 <constraint firstItem="eiT-EH-cd6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="XbO-MM-eva"/>
-                <constraint firstItem="eiT-EH-cd6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cEx-iu-7Rl"/>
+                <constraint firstItem="eiT-EH-cd6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="reG-3F-ftr"/>
             </constraints>
             <point key="canvasLocation" x="-59" y="117"/>
         </view>
@@ -75,8 +69,8 @@
         <namedColor name="NG100">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="NG900">
+            <color red="0.14100000262260437" green="0.21199999749660492" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

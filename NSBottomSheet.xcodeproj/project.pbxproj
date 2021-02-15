@@ -25,6 +25,10 @@
 		4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */; };
 		4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */; };
 		4943FE8025DA907F00B4C9F9 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7F25DA907F00B4C9F9 /* Color.xcassets */; };
+		49B7E59D25DAF5F800BB73F1 /* ExpoHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E59B25DAF5F800BB73F1 /* ExpoHistoryCell.swift */; };
+		49B7E59E25DAF5F800BB73F1 /* ExpoHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B7E59C25DAF5F800BB73F1 /* ExpoHistoryCell.xib */; };
+		49B7E5BB25DAFAB000BB73F1 /* ExpoHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5BA25DAFAB000BB73F1 /* ExpoHistoryModel.swift */; };
+		49B7E5BF25DB04A300BB73F1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5BE25DB04A300BB73F1 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
 		4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetContainer.xib; sourceTree = "<group>"; };
 		4943FE7F25DA907F00B4C9F9 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		49B7E59B25DAF5F800BB73F1 /* ExpoHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoHistoryCell.swift; sourceTree = "<group>"; };
+		49B7E59C25DAF5F800BB73F1 /* ExpoHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpoHistoryCell.xib; sourceTree = "<group>"; };
+		49B7E5BA25DAFAB000BB73F1 /* ExpoHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoHistoryModel.swift; sourceTree = "<group>"; };
+		49B7E5BE25DB04A300BB73F1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 				4943FE7725DA8C6900B4C9F9 /* UIBottomSheet.swift */,
 				4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */,
 				4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */,
+				49B7E5BE25DB04A300BB73F1 /* CardView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -131,16 +140,59 @@
 		4943FE6125DA87C800B4C9F9 /* BottomSheetViews */ = {
 			isa = PBXGroup;
 			children = (
-				4943FE6225DA89A200B4C9F9 /* WorldExpoController.swift */,
-				4943FE6325DA89A200B4C9F9 /* WorldExpoController.xib */,
-				4943FE6825DA8A6900B4C9F9 /* UpcomingExpoController.swift */,
-				4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */,
+				49B7E59925DAF5CB00BB73F1 /* WorldExpos */,
+				49B7E5C125DB067A00BB73F1 /* Upcoming Expo */,
 				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
 				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
 				4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */,
 				4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */,
 			);
 			path = BottomSheetViews;
+			sourceTree = "<group>";
+		};
+		49B7E59925DAF5CB00BB73F1 /* WorldExpos */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5B925DAFA9D00BB73F1 /* Model */,
+				49B7E5A125DAF60A00BB73F1 /* ExpoHistooryCell */,
+				49B7E5A025DAF5FD00BB73F1 /* Controller */,
+			);
+			path = WorldExpos;
+			sourceTree = "<group>";
+		};
+		49B7E5A025DAF5FD00BB73F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE6225DA89A200B4C9F9 /* WorldExpoController.swift */,
+				4943FE6325DA89A200B4C9F9 /* WorldExpoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		49B7E5A125DAF60A00BB73F1 /* ExpoHistooryCell */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E59B25DAF5F800BB73F1 /* ExpoHistoryCell.swift */,
+				49B7E59C25DAF5F800BB73F1 /* ExpoHistoryCell.xib */,
+			);
+			path = ExpoHistooryCell;
+			sourceTree = "<group>";
+		};
+		49B7E5B925DAFA9D00BB73F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5BA25DAFAB000BB73F1 /* ExpoHistoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49B7E5C125DB067A00BB73F1 /* Upcoming Expo */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE6825DA8A6900B4C9F9 /* UpcomingExpoController.swift */,
+				4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */,
+			);
+			path = "Upcoming Expo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +254,7 @@
 			files = (
 				4943FE4F25DA86E300B4C9F9 /* LaunchScreen.storyboard in Resources */,
 				4943FE6B25DA8A6900B4C9F9 /* UpcomingExpoController.xib in Resources */,
+				49B7E59E25DAF5F800BB73F1 /* ExpoHistoryCell.xib in Resources */,
 				4943FE4C25DA86E300B4C9F9 /* Assets.xcassets in Resources */,
 				4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */,
 				4943FE6525DA89A200B4C9F9 /* WorldExpoController.xib in Resources */,
@@ -221,12 +274,15 @@
 			files = (
 				4943FE6425DA89A200B4C9F9 /* WorldExpoController.swift in Sources */,
 				4943FE7825DA8C6900B4C9F9 /* UIBottomSheet.swift in Sources */,
+				49B7E5BB25DAFAB000BB73F1 /* ExpoHistoryModel.swift in Sources */,
 				4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */,
 				4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */,
 				4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */,
 				4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */,
+				49B7E59D25DAF5F800BB73F1 /* ExpoHistoryCell.swift in Sources */,
 				4943FE4525DA86E100B4C9F9 /* SceneDelegate.swift in Sources */,
 				4943FE6A25DA8A6900B4C9F9 /* UpcomingExpoController.swift in Sources */,
+				49B7E5BF25DB04A300BB73F1 /* CardView.swift in Sources */,
 				4943FE5E25DA878C00B4C9F9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,9 @@ class PavilionCell: UICollectionViewCell {
     }
     
     //MARK:- Custom Methods
-    func configureCell() {
+    func configureCell(model:PavilionModel) {
+        pavilionImageView.image = UIImage(named: model.pavilionImage ?? "home")
+        pavilionTitleLabel.text = model.pavilionName
     }
 
 }

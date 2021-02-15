@@ -45,7 +45,8 @@ class BottomSheetContainer: UIViewController {
     var animationDuratioon = 0.5
     
     private var collapsedHeight:CGFloat {
-        return self.view.frame.size.height / (1.0 / collapseRatio)
+        return 90
+//        return self.view.frame.size.height / (1.0 / collapseRatio)
     }
     
     // MARK: - LifeCycle

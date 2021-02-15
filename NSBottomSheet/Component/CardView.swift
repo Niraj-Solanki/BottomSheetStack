@@ -9,7 +9,7 @@ import UIKit
 
  class CardView: UIView {
     
-    var cornnerRadius : CGFloat = 5
+    var cornnerRadius : CGFloat = 10
        var shadowOfSetWidth : CGFloat = 1
        var shadowOfSetHeight : CGFloat = 1
        var shadowColour : UIColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)

@@ -31,6 +31,8 @@
 		49B7E5BF25DB04A300BB73F1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5BE25DB04A300BB73F1 /* CardView.swift */; };
 		49B7E5CA25DB13A000BB73F1 /* PavilionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5C825DB13A000BB73F1 /* PavilionCell.swift */; };
 		49B7E5CB25DB13A000BB73F1 /* PavilionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */; };
+		49B7E5D025DB20A000BB73F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5CF25DB20A000BB73F1 /* Constant.swift */; };
+		49B7E5D525DB22D700BB73F1 /* PavilionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5D425DB22D700BB73F1 /* PavilionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		49B7E5BE25DB04A300BB73F1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		49B7E5C825DB13A000BB73F1 /* PavilionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavilionCell.swift; sourceTree = "<group>"; };
 		49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PavilionCell.xib; sourceTree = "<group>"; };
+		49B7E5CF25DB20A000BB73F1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		49B7E5D425DB22D700BB73F1 /* PavilionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavilionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		4943FE4125DA86E100B4C9F9 /* NSBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				49B7E5CE25DB209100BB73F1 /* ConstantData */,
 				4943FE5A25DA872A00B4C9F9 /* AppDelegate */,
 				4943FE5925DA872000B4C9F9 /* Assets */,
 				4943FE5825DA871300B4C9F9 /* Component */,
@@ -200,9 +205,9 @@
 		49B7E5C325DB0BBC00BB73F1 /* Pavilions */ = {
 			isa = PBXGroup;
 			children = (
+				49B7E5D325DB22CC00BB73F1 /* Model */,
+				49B7E5D225DB22C300BB73F1 /* Controller */,
 				49B7E5C725DB138D00BB73F1 /* PavilionCell */,
-				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
-				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
 			);
 			path = Pavilions;
 			sourceTree = "<group>";
@@ -223,6 +228,31 @@
 				49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */,
 			);
 			path = PavilionCell;
+			sourceTree = "<group>";
+		};
+		49B7E5CE25DB209100BB73F1 /* ConstantData */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5CF25DB20A000BB73F1 /* Constant.swift */,
+			);
+			path = ConstantData;
+			sourceTree = "<group>";
+		};
+		49B7E5D225DB22C300BB73F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
+				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		49B7E5D325DB22CC00BB73F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5D425DB22D700BB73F1 /* PavilionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +339,9 @@
 				4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */,
 				49B7E5CA25DB13A000BB73F1 /* PavilionCell.swift in Sources */,
 				4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */,
+				49B7E5D525DB22D700BB73F1 /* PavilionModel.swift in Sources */,
 				4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */,
+				49B7E5D025DB20A000BB73F1 /* Constant.swift in Sources */,
 				4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */,
 				49B7E59D25DAF5F800BB73F1 /* ExpoHistoryCell.swift in Sources */,
 				4943FE4525DA86E100B4C9F9 /* SceneDelegate.swift in Sources */,

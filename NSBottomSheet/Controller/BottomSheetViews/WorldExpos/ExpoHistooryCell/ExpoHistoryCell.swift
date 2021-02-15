@@ -24,7 +24,11 @@ class ExpoHistoryCell: UICollectionViewCell {
     }
     
     //MARK:- Custom Methods
-    func configureCell() {
+    func configureCell(model:ExpoHistoryModel) {
+        eventImageView.image = UIImage(named: model.expoImageName ?? "home")
+        eventYearLabel.text = model.expoYear
+        eventTitleLabel.text = model.expoTitle
+        eventDescriptionLabel.text = model.expeDescription
     }
 
 }

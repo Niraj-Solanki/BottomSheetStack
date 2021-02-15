@@ -13,7 +13,8 @@ class PavalionsController: UIBottomSheet {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Objects
-
+    var pavilionsArray:[PavilionModel] = []
+    
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class PavalionsController: UIBottomSheet {
 
     // MARK: - Custom Methods
     func initializeVariables() {
+        setUpData()
         collectionView.register(UINib.init(nibName: "PavilionCell", bundle: nil), forCellWithReuseIdentifier:"PavilionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -40,12 +42,12 @@ class PavalionsController: UIBottomSheet {
 extension PavalionsController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //MARK:- CollectionView Delegate & Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return pavilionsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let pavilionCell:PavilionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PavilionCell", for: indexPath) as!  PavilionCell
-        pavilionCell.configureCell()
+        pavilionCell.configureCell(model:pavilionsArray[indexPath.row])
         return pavilionCell
     }
     

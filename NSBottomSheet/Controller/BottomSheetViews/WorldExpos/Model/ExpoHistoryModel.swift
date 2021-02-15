@@ -6,7 +6,7 @@
 //
 
 import UIKit
-struct nameExpoHistoryModel {
+struct ExpoHistoryModel {
     let expoTitle:String?
     let expeDescription:String?
     let expoYear:String?

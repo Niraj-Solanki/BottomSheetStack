@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,26 +17,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-68-zB4" customClass="CardView" customModule="NSBottomSheet" customModuleProvider="target">
-                        <rect key="frame" x="4" y="4" width="292" height="192"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-68-zB4" customClass="CardView" customModule="NSBottomSheet" customModuleProvider="target">
+                        <rect key="frame" x="6" y="6" width="288" height="188"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE8-gD-lNT">
-                                <rect key="frame" x="4" y="10" width="284" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <color key="textColor" red="0.027450980390000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="expowhite" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-aD-spf">
-                                <rect key="frame" x="0.0" y="39.5" width="292" height="152.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="expowhite" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-aD-spf">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="188"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE8-gD-lNT">
+                                <rect key="frame" x="0.0" y="163" width="288" height="25"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.031372549019607843" blue="0.031372549019607843" alpha="0.35250066289838577" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="j3m-Pe-yBa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" name="NG100"/>
+                                <color key="highlightedColor" red="0.027450980390000001" green="0.031372549020000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tE8-gD-lNT" firstAttribute="leading" secondItem="Yxs-68-zB4" secondAttribute="leading" constant="4" id="74e-T4-QuZ"/>
-                            <constraint firstAttribute="trailing" secondItem="tE8-gD-lNT" secondAttribute="trailing" constant="4" id="CU8-UF-7Zm"/>
-                            <constraint firstItem="Hbf-aD-spf" firstAttribute="top" secondItem="tE8-gD-lNT" secondAttribute="bottom" constant="10" id="NC6-yE-ACI"/>
+                            <constraint firstItem="tE8-gD-lNT" firstAttribute="leading" secondItem="Yxs-68-zB4" secondAttribute="leading" id="74e-T4-QuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="tE8-gD-lNT" secondAttribute="trailing" id="CU8-UF-7Zm"/>
+                            <constraint firstAttribute="bottom" secondItem="tE8-gD-lNT" secondAttribute="bottom" id="Fg4-4l-bCF"/>
+                            <constraint firstItem="Hbf-aD-spf" firstAttribute="top" secondItem="Yxs-68-zB4" secondAttribute="top" id="GG8-pm-s6g"/>
                             <constraint firstItem="Hbf-aD-spf" firstAttribute="leading" secondItem="Yxs-68-zB4" secondAttribute="leading" id="VQH-DX-Iym"/>
-                            <constraint firstItem="tE8-gD-lNT" firstAttribute="top" secondItem="Yxs-68-zB4" secondAttribute="top" constant="10" id="doV-V8-2sD"/>
                             <constraint firstAttribute="bottom" secondItem="Hbf-aD-spf" secondAttribute="bottom" id="mPj-pF-N3x"/>
                             <constraint firstAttribute="trailing" secondItem="Hbf-aD-spf" secondAttribute="trailing" id="qEZ-qE-w15"/>
                         </constraints>
@@ -44,10 +49,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Yxs-68-zB4" secondAttribute="bottom" constant="4" id="HHo-15-7cy"/>
-                <constraint firstItem="Yxs-68-zB4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="ICY-QM-irA"/>
-                <constraint firstAttribute="trailing" secondItem="Yxs-68-zB4" secondAttribute="trailing" constant="4" id="gWf-gh-XZV"/>
-                <constraint firstItem="Yxs-68-zB4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="nxw-bi-ya9"/>
+                <constraint firstAttribute="bottom" secondItem="Yxs-68-zB4" secondAttribute="bottom" constant="6" id="HHo-15-7cy"/>
+                <constraint firstItem="Yxs-68-zB4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="ICY-QM-irA"/>
+                <constraint firstAttribute="trailing" secondItem="Yxs-68-zB4" secondAttribute="trailing" constant="6" id="gWf-gh-XZV"/>
+                <constraint firstItem="Yxs-68-zB4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="nxw-bi-ya9"/>
             </constraints>
             <connections>
                 <outlet property="pavilionImageView" destination="Hbf-aD-spf" id="Uge-Ke-Rh8"/>
@@ -58,5 +63,8 @@
     </objects>
     <resources>
         <image name="expowhite" width="380" height="200"/>
+        <namedColor name="NG100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

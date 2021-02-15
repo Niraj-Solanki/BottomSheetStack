@@ -61,6 +61,7 @@
                                         <constraints>
                                             <constraint firstItem="l31-p7-5um" firstAttribute="leading" secondItem="31Y-8P-kNI" secondAttribute="leading" constant="10" id="7Ts-YL-WfH"/>
                                             <constraint firstAttribute="trailing" secondItem="l31-p7-5um" secondAttribute="trailing" constant="10" id="7i1-Ju-CNH"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="L3N-h4-v6Z"/>
                                             <constraint firstAttribute="trailing" secondItem="Od6-b3-s0w" secondAttribute="trailing" constant="10" id="Qo6-5o-3Bn"/>
                                             <constraint firstItem="Od6-b3-s0w" firstAttribute="leading" secondItem="31Y-8P-kNI" secondAttribute="leading" constant="10" id="UF4-rq-Lhp"/>
                                             <constraint firstAttribute="bottom" secondItem="Od6-b3-s0w" secondAttribute="bottom" constant="10" id="Ysh-xy-ri9"/>

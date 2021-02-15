@@ -13,6 +13,7 @@ class WorldExpoController: UIBottomSheet {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Objects
+    var expoHistoryArray:[ExpoHistoryModel] = []
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class WorldExpoController: UIBottomSheet {
 
     // MARK: - Custom Methods
     func initializeVariables() {
+        setupData()
         collectionView.register(UINib.init(nibName: "ExpoHistoryCell", bundle: nil), forCellWithReuseIdentifier:"ExpoHistoryCell")
     }
 
@@ -53,12 +55,12 @@ extension WorldExpoController : UIBottomSheetDelegate
 extension WorldExpoController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //MARK:- CollectionView Delegate & Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return expoHistoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let expoHistoryCell:ExpoHistoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExpoHistoryCell", for: indexPath) as!  ExpoHistoryCell
-        expoHistoryCell.configureCell()
+        expoHistoryCell.configureCell(model:expoHistoryArray[indexPath.row])
         return expoHistoryCell
     }
     

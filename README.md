@@ -19,7 +19,7 @@ Swift:- 5.2
 ## Application Preview
 
 #### BottomSheetStack
-<img src="/Read%20Files/BottomSheetStack1.gif" width="246" height="537.6"> <img src="/Read%20Files/BottomSheetStack2.gif" width="246" height="537.6"> 
+<img src="/Read%20Files/BottomSheetStack1.gif" width="225" height="400.6"> <img src="/Read%20Files/BottomSheetStack2.gif" width="225" height="400.6"> 
 
 #### Home Screen & BottomSheetStack -> UISBottomSheet
 <img src="/Read%20Files/0.png" width="246" height="537.6"> <img src="/Read%20Files/1.png" width="246" height="537.6"> <img src="/Read%20Files/2.png" width="246" height="537.6">

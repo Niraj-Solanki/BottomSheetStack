@@ -9,21 +9,45 @@
 /* Begin PBXBuildFile section */
 		4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE4225DA86E100B4C9F9 /* AppDelegate.swift */; };
 		4943FE4525DA86E100B4C9F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE4425DA86E100B4C9F9 /* SceneDelegate.swift */; };
-		4943FE4725DA86E100B4C9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE4625DA86E100B4C9F9 /* ViewController.swift */; };
 		4943FE4A25DA86E100B4C9F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE4825DA86E100B4C9F9 /* Main.storyboard */; };
 		4943FE4C25DA86E300B4C9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE4B25DA86E300B4C9F9 /* Assets.xcassets */; };
 		4943FE4F25DA86E300B4C9F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE4D25DA86E300B4C9F9 /* LaunchScreen.storyboard */; };
+		4943FE5E25DA878C00B4C9F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE5C25DA878C00B4C9F9 /* HomeViewController.swift */; };
+		4943FE6425DA89A200B4C9F9 /* WorldExpoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE6225DA89A200B4C9F9 /* WorldExpoController.swift */; };
+		4943FE6525DA89A200B4C9F9 /* WorldExpoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE6325DA89A200B4C9F9 /* WorldExpoController.xib */; };
+		4943FE6A25DA8A6900B4C9F9 /* UpcomingExpoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE6825DA8A6900B4C9F9 /* UpcomingExpoController.swift */; };
+		4943FE6B25DA8A6900B4C9F9 /* UpcomingExpoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */; };
+		4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */; };
+		4943FE7025DA8A9700B4C9F9 /* PavalionsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */; };
+		4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */; };
+		4943FE7525DA8AAC00B4C9F9 /* BookTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */; };
+		4943FE7825DA8C6900B4C9F9 /* BottomSheetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */; };
+		4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */; };
+		4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */; };
+		4943FE8025DA907F00B4C9F9 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7F25DA907F00B4C9F9 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4943FE3F25DA86E100B4C9F9 /* NSBottomSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSBottomSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4943FE4225DA86E100B4C9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4943FE4425DA86E100B4C9F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4943FE4625DA86E100B4C9F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4943FE4925DA86E100B4C9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4943FE4B25DA86E300B4C9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4943FE4E25DA86E300B4C9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4943FE5025DA86E300B4C9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4943FE5C25DA878C00B4C9F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4943FE6225DA89A200B4C9F9 /* WorldExpoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldExpoController.swift; sourceTree = "<group>"; };
+		4943FE6325DA89A200B4C9F9 /* WorldExpoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorldExpoController.xib; sourceTree = "<group>"; };
+		4943FE6825DA8A6900B4C9F9 /* UpcomingExpoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingExpoController.swift; sourceTree = "<group>"; };
+		4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingExpoController.xib; sourceTree = "<group>"; };
+		4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavalionsController.swift; sourceTree = "<group>"; };
+		4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PavalionsController.xib; sourceTree = "<group>"; };
+		4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
+		4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTicketController.xib; sourceTree = "<group>"; };
+		4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetBase.swift; sourceTree = "<group>"; };
+		4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
+		4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetContainer.xib; sourceTree = "<group>"; };
+		4943FE7F25DA907F00B4C9F9 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,67 @@
 		4943FE4125DA86E100B4C9F9 /* NSBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				4943FE4225DA86E100B4C9F9 /* AppDelegate.swift */,
-				4943FE4425DA86E100B4C9F9 /* SceneDelegate.swift */,
-				4943FE4625DA86E100B4C9F9 /* ViewController.swift */,
+				4943FE5A25DA872A00B4C9F9 /* AppDelegate */,
+				4943FE5925DA872000B4C9F9 /* Assets */,
+				4943FE5825DA871300B4C9F9 /* Component */,
+				4943FE5725DA870900B4C9F9 /* Controller */,
 				4943FE4825DA86E100B4C9F9 /* Main.storyboard */,
-				4943FE4B25DA86E300B4C9F9 /* Assets.xcassets */,
 				4943FE4D25DA86E300B4C9F9 /* LaunchScreen.storyboard */,
 				4943FE5025DA86E300B4C9F9 /* Info.plist */,
 			);
 			path = NSBottomSheet;
+			sourceTree = "<group>";
+		};
+		4943FE5725DA870900B4C9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE6125DA87C800B4C9F9 /* BottomSheetViews */,
+				4943FE5C25DA878C00B4C9F9 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4943FE5825DA871300B4C9F9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */,
+				4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */,
+				4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		4943FE5925DA872000B4C9F9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE7F25DA907F00B4C9F9 /* Color.xcassets */,
+				4943FE4B25DA86E300B4C9F9 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4943FE5A25DA872A00B4C9F9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE4225DA86E100B4C9F9 /* AppDelegate.swift */,
+				4943FE4425DA86E100B4C9F9 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4943FE6125DA87C800B4C9F9 /* BottomSheetViews */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE6225DA89A200B4C9F9 /* WorldExpoController.swift */,
+				4943FE6325DA89A200B4C9F9 /* WorldExpoController.xib */,
+				4943FE6825DA8A6900B4C9F9 /* UpcomingExpoController.swift */,
+				4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */,
+				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
+				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
+				4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */,
+				4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */,
+			);
+			path = BottomSheetViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4943FE4F25DA86E300B4C9F9 /* LaunchScreen.storyboard in Resources */,
+				4943FE6B25DA8A6900B4C9F9 /* UpcomingExpoController.xib in Resources */,
 				4943FE4C25DA86E300B4C9F9 /* Assets.xcassets in Resources */,
+				4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */,
+				4943FE6525DA89A200B4C9F9 /* WorldExpoController.xib in Resources */,
+				4943FE7525DA8AAC00B4C9F9 /* BookTicketController.xib in Resources */,
 				4943FE4A25DA86E100B4C9F9 /* Main.storyboard in Resources */,
+				4943FE8025DA907F00B4C9F9 /* Color.xcassets in Resources */,
+				4943FE7025DA8A9700B4C9F9 /* PavalionsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4943FE4725DA86E100B4C9F9 /* ViewController.swift in Sources */,
+				4943FE6425DA89A200B4C9F9 /* WorldExpoController.swift in Sources */,
+				4943FE7825DA8C6900B4C9F9 /* BottomSheetBase.swift in Sources */,
+				4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */,
 				4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */,
+				4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */,
+				4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */,
 				4943FE4525DA86E100B4C9F9 /* SceneDelegate.swift in Sources */,
+				4943FE6A25DA8A6900B4C9F9 /* UpcomingExpoController.swift in Sources */,
+				4943FE5E25DA878C00B4C9F9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

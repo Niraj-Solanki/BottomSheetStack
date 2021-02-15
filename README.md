@@ -4,7 +4,7 @@ Sample of BottomSheetStack
 
 
 NSBottoomSheet Application:- This Sample Contain Structure of BottomSheetStack </Br>
-<b>Home Screen</b>:- Used For Display "World Expo Details" & "Drive BottomSheetStack/BottomSheetContainer".<br> They are many More UIBottomScreen which inherited from UIViewControoller and used to present in BottomSheetContainer. BottomSheetContainer is working as Stack. Every UIBottomScreen have 4 states. {Launch, collapse, Expend, closed}. It can handle upto 5 UIBottomShee. </br></br>
+<b>Home Screen</b>:- Used For Display "World Expo Details" & "Drive BottomSheetStack/BottomSheetContainer".<br> They are many More UIBottomScreen which inherited from UIViewControoller and used to present in BottomSheetContainer. BottomSheetContainer is working as Stack. Every UIBottomScreen have 4 states. {Launch, collapse, Expend, closed}. It can handle upto 5 UIBottomSheet. </br></br>
 <b> Working </b>:- Just Created Simple UIBottomSheet and used bottomSheetNavigation to present more UIBottomScreen. Initially have to create object of BottomSheetContainer and initiateWith any UIBottomSheet. </br></br>
 
 

@@ -24,13 +24,13 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Expos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-2C-nyk">
                             <rect key="frame" x="20" y="30" width="374" height="26.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                             <color key="textColor" name="NG900"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-r0-2Gw">
                             <rect key="frame" x="0.0" y="768" width="414" height="50"/>
-                            <color key="backgroundColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.17296918080000001" green="0.1721335809" blue="0.1738047808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="s6a-dz-SSl"/>
                             </constraints>
@@ -63,7 +63,7 @@
                             <color key="textColor" name="NG800"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-FH-1hz">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-FH-1hz">
                             <rect key="frame" x="0.0" y="272.5" width="414" height="200"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -75,6 +75,10 @@
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="EcZ-0g-0i2"/>
+                                <outlet property="delegate" destination="-1" id="Z77-9f-sEO"/>
+                            </connections>
                         </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

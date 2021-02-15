@@ -25,4 +25,9 @@ class UpcomingExpoController: UIBottomSheet {
         let pavalionsVC = PavalionsController()
         bottomSheetNavigation?.present(newBottomSheet: pavalionsVC)
     }
+    @IBAction func dubaiExpoActiono(_ sender: Any) {
+        if let url = URL(string: "https://www.expo2020dubai.com/") {
+            UIApplication.shared.open(url)
+        }
+    }
 }

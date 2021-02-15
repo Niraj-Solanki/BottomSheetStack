@@ -23,8 +23,6 @@ class WorldExpoController: UIBottomSheet {
     // MARK: - Custom Methods
     func initializeVariables() {
         collectionView.register(UINib.init(nibName: "ExpoHistoryCell", bundle: nil), forCellWithReuseIdentifier:"ExpoHistoryCell")
-        collectionView.delegate = self
-        collectionView.dataSource = self
     }
 
     // MARK: - Action Methods
@@ -65,7 +63,7 @@ extension WorldExpoController : UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.size.width - 50, height: 200)
+        return CGSize(width: self.view.frame.size.width - 30, height: 200)
     }
     
 }

@@ -24,12 +24,12 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Expo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-lV-Bg6">
                             <rect key="frame" x="20" y="30" width="374" height="26.5"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                            <color key="textColor" name="NG100"/>
+                            <color key="textColor" name="NG900"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-zn-CT1">
                             <rect key="frame" x="0.0" y="768" width="414" height="50"/>
-                            <color key="backgroundColor" red="0.23921568630000001" green="0.2784313725" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="O0I-IA-Fdz"/>
                             </constraints>
@@ -41,21 +41,45 @@
                                 <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="2LF-4v-nCE"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJY-jo-wj4">
+                            <rect key="frame" x="20" y="96.5" width="374" height="143.5"/>
+                            <string key="text">Expo 2020 Dubai will be the first World Expo ever hosted in the Middle East, Africa and South Asia (MEASA) region. Through our theme of Connecting Minds, Creating the Future, we aim to host a World Expo that inspires people by showcasing the best examples of collaboration, innovation and cooperation from around the world.
+</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="NG900"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMx-fy-bBz">
+                            <rect key="frame" x="67" y="240" width="280" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="280" id="7wG-Ct-PM9"/>
+                                <constraint firstAttribute="height" constant="150" id="GxR-zJ-g0F"/>
+                            </constraints>
+                            <state key="normal" image="expo2020"/>
+                            <connections>
+                                <action selector="dubaiExpoActiono:" destination="-1" eventType="touchUpInside" id="Vk2-ZQ-9qW"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="uMx-fy-bBz" firstAttribute="top" secondItem="FJY-jo-wj4" secondAttribute="bottom" id="AWM-bO-Lhr"/>
+                        <constraint firstItem="uMx-fy-bBz" firstAttribute="centerX" secondItem="FJY-jo-wj4" secondAttribute="centerX" id="BtG-lh-8xH"/>
                         <constraint firstItem="MSw-lV-Bg6" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" constant="20" id="HQf-Wc-Hbo"/>
                         <constraint firstItem="MSw-lV-Bg6" firstAttribute="top" secondItem="ngR-Kv-uGo" secondAttribute="top" constant="30" id="JB9-Ds-ehV"/>
+                        <constraint firstItem="FJY-jo-wj4" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" constant="20" id="LgD-qG-dFe"/>
+                        <constraint firstAttribute="trailing" secondItem="FJY-jo-wj4" secondAttribute="trailing" constant="20" id="bLi-XS-4M3"/>
                         <constraint firstItem="MSw-lV-Bg6" firstAttribute="centerX" secondItem="ngR-Kv-uGo" secondAttribute="centerX" id="byC-0y-bTf"/>
                         <constraint firstAttribute="trailing" secondItem="sF6-zn-CT1" secondAttribute="trailing" id="iZ2-IE-kdd"/>
                         <constraint firstItem="sF6-zn-CT1" firstAttribute="leading" secondItem="ngR-Kv-uGo" secondAttribute="leading" id="kNt-Wb-NGZ"/>
                         <constraint firstAttribute="trailing" secondItem="MSw-lV-Bg6" secondAttribute="trailing" constant="20" id="t2H-H2-0ns"/>
                         <constraint firstAttribute="bottom" secondItem="sF6-zn-CT1" secondAttribute="bottom" id="tR9-Za-yrC"/>
+                        <constraint firstItem="FJY-jo-wj4" firstAttribute="top" secondItem="MSw-lV-Bg6" secondAttribute="bottom" constant="40" id="zyK-v7-Onm"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="ngR-Kv-uGo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QCP-9C-ceM"/>
                 <constraint firstItem="ngR-Kv-uGo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sso-NS-eu7"/>
@@ -66,8 +90,12 @@
         </view>
     </objects>
     <resources>
+        <image name="expo2020" width="768" height="408"/>
         <namedColor name="NG100">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NG900">
+            <color red="0.14100000262260437" green="0.21199999749660492" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

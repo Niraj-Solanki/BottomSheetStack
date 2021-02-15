@@ -29,6 +29,8 @@
 		49B7E59E25DAF5F800BB73F1 /* ExpoHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B7E59C25DAF5F800BB73F1 /* ExpoHistoryCell.xib */; };
 		49B7E5BB25DAFAB000BB73F1 /* ExpoHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5BA25DAFAB000BB73F1 /* ExpoHistoryModel.swift */; };
 		49B7E5BF25DB04A300BB73F1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5BE25DB04A300BB73F1 /* CardView.swift */; };
+		49B7E5CA25DB13A000BB73F1 /* PavilionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B7E5C825DB13A000BB73F1 /* PavilionCell.swift */; };
+		49B7E5CB25DB13A000BB73F1 /* PavilionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		49B7E59C25DAF5F800BB73F1 /* ExpoHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpoHistoryCell.xib; sourceTree = "<group>"; };
 		49B7E5BA25DAFAB000BB73F1 /* ExpoHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoHistoryModel.swift; sourceTree = "<group>"; };
 		49B7E5BE25DB04A300BB73F1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		49B7E5C825DB13A000BB73F1 /* PavilionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavilionCell.swift; sourceTree = "<group>"; };
+		49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PavilionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +146,8 @@
 			children = (
 				49B7E59925DAF5CB00BB73F1 /* WorldExpos */,
 				49B7E5C125DB067A00BB73F1 /* Upcoming Expo */,
-				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
-				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
-				4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */,
-				4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */,
+				49B7E5C325DB0BBC00BB73F1 /* Pavilions */,
+				49B7E5C425DB0BE200BB73F1 /* Book Tickets */,
 			);
 			path = BottomSheetViews;
 			sourceTree = "<group>";
@@ -193,6 +195,34 @@
 				4943FE6925DA8A6900B4C9F9 /* UpcomingExpoController.xib */,
 			);
 			path = "Upcoming Expo";
+			sourceTree = "<group>";
+		};
+		49B7E5C325DB0BBC00BB73F1 /* Pavilions */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5C725DB138D00BB73F1 /* PavilionCell */,
+				4943FE6D25DA8A9700B4C9F9 /* PavalionsController.swift */,
+				4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */,
+			);
+			path = Pavilions;
+			sourceTree = "<group>";
+		};
+		49B7E5C425DB0BE200BB73F1 /* Book Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */,
+				4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */,
+			);
+			path = "Book Tickets";
+			sourceTree = "<group>";
+		};
+		49B7E5C725DB138D00BB73F1 /* PavilionCell */ = {
+			isa = PBXGroup;
+			children = (
+				49B7E5C825DB13A000BB73F1 /* PavilionCell.swift */,
+				49B7E5C925DB13A000BB73F1 /* PavilionCell.xib */,
+			);
+			path = PavilionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +287,7 @@
 				49B7E59E25DAF5F800BB73F1 /* ExpoHistoryCell.xib in Resources */,
 				4943FE4C25DA86E300B4C9F9 /* Assets.xcassets in Resources */,
 				4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */,
+				49B7E5CB25DB13A000BB73F1 /* PavilionCell.xib in Resources */,
 				4943FE6525DA89A200B4C9F9 /* WorldExpoController.xib in Resources */,
 				4943FE7525DA8AAC00B4C9F9 /* BookTicketController.xib in Resources */,
 				4943FE4A25DA86E100B4C9F9 /* Main.storyboard in Resources */,
@@ -276,6 +307,7 @@
 				4943FE7825DA8C6900B4C9F9 /* UIBottomSheet.swift in Sources */,
 				49B7E5BB25DAFAB000BB73F1 /* ExpoHistoryModel.swift in Sources */,
 				4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */,
+				49B7E5CA25DB13A000BB73F1 /* PavilionCell.swift in Sources */,
 				4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */,
 				4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */,
 				4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */,

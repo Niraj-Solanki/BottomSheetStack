@@ -7,12 +7,12 @@
 //
 import UIKit
 
-@IBDesignable class CardView: UIView {
+ class CardView: UIView {
     
-    var cornnerRadius : CGFloat = 3
+    var cornnerRadius : CGFloat = 5
        var shadowOfSetWidth : CGFloat = 1
        var shadowOfSetHeight : CGFloat = 1
-       var shadowColour : UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+       var shadowColour : UIColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
        var shadowOpacity : CGFloat = 0.3
        
        override func layoutSubviews() {
@@ -23,8 +23,4 @@ import UIKit
            layer.shadowPath = shadowPath.cgPath
            layer.shadowOpacity = Float(shadowOpacity)
        }
-}
-
-@IBDesignable class CardViewRadius: UIView {
-   
 }

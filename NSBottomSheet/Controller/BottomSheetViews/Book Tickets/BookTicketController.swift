@@ -25,4 +25,10 @@ class BookTicketController: UIBottomSheet {
         bottomSheetNavigation?.dismiss()
     }
     
+    @IBAction func visitSiteAction(_ sender: UIButton) {
+        if let url = URL(string: "https://www.expo2020dubai.com/en/support/faq?#Ticketing") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
 }

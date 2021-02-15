@@ -21,10 +21,12 @@ Swift:- 5.2
 #### BottomSheetStack
 <img src="/Read%20Files/BottomSheetStack1.gif" width="225" height="400.6"> <img src="/Read%20Files/BottomSheetStack2.gif" width="225" height="400.6"> 
 
-#### Home Screen & BottomSheetStack -> UISBottomSheet
-<img src="/Read%20Files/0.png" width="246" height="537.6"> <img src="/Read%20Files/1.png" width="246" height="537.6"> <img src="/Read%20Files/2.png" width="246" height="537.6">
-<img src="/Read%20Files/3.png" width="246" height="537.6">
-<img src="/Read%20Files/4.png" width="246" height="537.6">
+#### Home Screen & BottomSheetStack -> UISBottomSheet In Iphone12
+<img src="/Read%20Files/0.png" width="292" height="632.6"> <img src="/Read%20Files/1.png" width="292" height="623.6"> <img src="/Read%20Files/2.png" width="292" height="632.6">
+
+#### BottomSheetStack -> UISBottomSheet In Iphone8
+<img src="/Read%20Files/3.png" width="225" height="400.6">
+<img src="/Read%20Files/4.png" width="225" height="400.6">
 
 
 ## Contact

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WorldExpoController: BottomSheetBase {
+class WorldExpoController: UIBottomSheet {
 
     // MARK: - Outlets
     
@@ -22,6 +22,24 @@ class WorldExpoController: BottomSheetBase {
 
     // MARK: - Action Methods
     @IBAction func nextButtonAction(_ sender: Any) {
+        let upcomingExpoVC = UpcomingExpoController.init()
+        bottomSheetNavigation?.present(newBottomSheet: upcomingExpoVC)
     }
-    
+}
+
+//AMRK:- UIBottomSheet CallBack
+extension UpcomingExpoController : UIBottomSheetDelegate
+{
+    func bottomSheetStateChange(newState: BottomSheetState) {
+        switch state {
+        case .closed:
+            print("Upcoming Event Sheet Closed")
+        case .collapsed:
+            print("Upcoming Event Sheet Collapesd")
+        case .expended:
+            print("Upcoming Event Sheet Expended")
+        case .launch:
+        print("Upcoming Event Sheet Launched")
+        }
+    }
 }

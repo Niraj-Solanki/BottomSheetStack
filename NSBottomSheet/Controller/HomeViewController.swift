@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     // MARK: - Action Methods
     @IBAction func exploreWorldAction(_ sender: Any) {
         let worldExpoVC = WorldExpoController()
-        let bottomSheetContainer = BottomSheetContainer.init(fromController: self, initialView: worldExpoVC)
+        let bottomSheetContainer = BottomSheetContainer.init(fromController: self, bottomSheet: worldExpoVC)
         bottomSheetContainer.present()
     }
     

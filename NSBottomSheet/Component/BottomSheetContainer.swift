@@ -16,7 +16,16 @@ enum BottomSheetState {
 
 // Bottom Sheet Delegate
 protocol BottomSheetDelegate {
-    func nextBottomSheet(newBottomSheet:BottomSheetBase)
+    func present(newBottomSheet:UIBottomSheet)
+    func dismiss()
+}
+
+protocol UIBottomSheetDelegate {
+    func bottomSheetStateChange(newState:BottomSheetState)
+}
+
+extension UIBottomSheetDelegate{
+    func bottomSheetStateChange(newState:BottomSheetState){}
 }
 
 class BottomSheetContainer: UIViewController {
@@ -26,11 +35,13 @@ class BottomSheetContainer: UIViewController {
     
     // MARK: - Objects
     private var parentController:UIViewController?
-    private var viewControllers:[BottomSheetBase] = []
+    private var initialSheet:UIBottomSheet?
+    private var bottomSheetArray:[UIBottomSheet] = []
     
     private var currentViewIndex = 0
     private let collapseRatio:CGFloat = 0.13
     private let overlayTag = 121
+    private let tagModifier = 1000
     var animationDuratioon = 0.5
     
     private var collapsedHeight:CGFloat {
@@ -43,90 +54,49 @@ class BottomSheetContainer: UIViewController {
     }
 
     //MARK:- Instance Method
-    init (fromController:UIViewController,initialView:BottomSheetBase) {
+    init (fromController:UIViewController,bottomSheet:UIBottomSheet) {
         super.init(nibName: nil, bundle: nil)
         self.parentController = fromController
-        self.viewControllers = [initialView]
+        self.initialSheet = bottomSheet
+        self.initialSheet?.state = .launch
+        bottomSheet.bottomSheetNavigation = self
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    // MARK: - Custom Methods
-
-    // MARK: - Action Methods
  
+    //MARK:- Action Methods
+    @IBAction func closeBottomSheet(_ sender: UIButton) {
+        dismissAll()
+    }
+    
     //MARK:- Custom MEthods
-    
-    private func addViewInStack(currentView:UIView,index:Int,animate:Bool)  {
-        if animate {
-            currentView.frame = getBeforeExtendedFrame(index: index)
+    private func addViewInStack(bottomSheet:UIBottomSheet,index:Int,animate:Bool)  {
+        view.layoutIfNeeded()
+        let calculatedHeight = self.view.frame.size.height - (collapsedHeight * CGFloat((index + 1)))
+        
+        bottomSheet.view.frame = CGRect(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: calculatedHeight)
+        
+        addOverlay(bottomSheet: bottomSheet)
+        
+        bottomSheet.view.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
+        bottomSheet.view.layer.cornerRadius = 20
+        bottomSheet.view.clipsToBounds = true
+        bottomSheet.view.tag = tagModifier + currentViewIndex
+        addSwipe(view: bottomSheet.view)
+        
+        self.view.addSubview(bottomSheet.view)
+        
+        UIView.animate(withDuration: animationDuratioon) {
+            bottomSheet.view.frame = CGRect(x: 0, y: (self.collapsedHeight * CGFloat((index + 1))), width: self.view.frame.size.width, height: calculatedHeight)
         }
-        else{
-            currentView.frame = getExpendedFrame(index: index)
+        
+        if currentViewIndex > 0 {
+            let previousBottomSheet = bottomSheetArray[currentViewIndex - 1]
+            bottomSheetArray[currentViewIndex - 1].state = .collapsed
+            updateUI(bottomSheet: previousBottomSheet)
         }
-        
-        //OverLay
-        let overlayView = UIView.init(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: currentView.frame.size.height))
-        
-        overlayView.tag = 121 // OverlayTags
-        overlayView.backgroundColor = #colorLiteral(red: 0.1411764706, green: 0.2117647059, blue: 0.2823529412, alpha: 0.2)
-        overlayView.isHidden = true
-        
-        //UIImage
-        let expendImage = UIImageView.init(frame: CGRect.init(x: overlayView.frame.size.width - 40, y: (collapsedHeight - 20) / 2, width: 20, height: 20))
-        expendImage.image = UIImage(named: "expendIcon")
-        
-        overlayView.addSubview(expendImage)
-        currentView.addSubview(overlayView)
-        
-        currentView.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
-        currentView.layer.cornerRadius = 20
-        currentView.clipsToBounds = true
-        currentView.tag = encodeTag(index: currentViewIndex)
-        addSwipe(view: currentView)
-        self.view.addSubview(currentView)
-        
-        if animate {
-            if let previousView = self.view.viewWithTag(encodeTag(index: currentViewIndex - 1)), let overLayPrevious = previousView.viewWithTag(overlayTag) {
-                overLayPrevious.alpha = 0
-                UIView.animate(withDuration: animationDuratioon) {
-                    overLayPrevious.alpha = 1
-                    overLayPrevious.isHidden = false
-                }
-            }
-            
-            UIView.animate(withDuration: animationDuratioon) {
-                currentView.frame = self.getExpendedFrame(index: index)
-            }
-        }
-    }
-    
-    func encodeTag(index:Int) -> Int {
-        return ((index + 121) * 223)
-    }
-    
-    func decodeTag(encoded:Int) -> Int {
-        return (encoded / 223) - 121
-    }
-    
-    func getExpendedFrame(index:Int) -> CGRect {
-        var newFrame = viewControllers[index].view.frame
-        newFrame.origin.x = 0
-        newFrame.origin.y = (collapsedHeight * CGFloat((index + 1)))
-        newFrame.size.height = self.view.frame.size.height - (collapsedHeight * CGFloat((index + 1)))
-        newFrame.size.width = self.view.frame.size.width
-        return newFrame
-    }
-    
-    func getBeforeExtendedFrame(index:Int) -> CGRect {
-        var newFrame = viewControllers[index].view.frame
-        newFrame.origin.x = 0
-        newFrame.origin.y = self.view.frame.size.height
-        newFrame.size.height = self.view.frame.size.height - (collapsedHeight * CGFloat((index + 1)))
-        newFrame.size.width = self.view.frame.size.width
-        return newFrame
     }
     
     func present() {
@@ -146,9 +116,8 @@ class BottomSheetContainer: UIViewController {
         self.didMove(toParent: self)
         self.view.frame = self.dismisFrameValue()
         
-        if let firstView = viewControllers.first?.view {
-            addViewInStack(currentView: firstView, index: currentViewIndex, animate: false)
-        }
+        //First Screen
+        updateUI(bottomSheet: initialSheet)
         
         //Presenting Animation
         UIView.animate(withDuration: 0.5) { [weak self] in
@@ -157,101 +126,79 @@ class BottomSheetContainer: UIViewController {
         }
     }
     
-    func nextViewInitiate()  {
-        if currentViewIndex < (viewControllers.count - 1) {
-            currentViewIndex = currentViewIndex + 1
-            
-        }
-        else{
-            dismiss()
-        }
-    }
-    
-    func showOverLay(index:Int)  {
-        if let previousView = self.view.viewWithTag(encodeTag(index: index)), let overLayPrevious = previousView.viewWithTag(121) {
-            UIView.animate(withDuration: animationDuratioon) {
-                overLayPrevious.alpha = 0
-            } completion: { _ in
-                overLayPrevious.isHidden = true
-            }
+    func updateUI(bottomSheet:UIBottomSheet?) {
+        guard let bottomSheet = bottomSheet else { return }
+        
+        switch bottomSheet.state {
+        case .launch:
+            bottomSheet.bottomSheetNavigation = self
+            bottomSheetArray.append(bottomSheet)
+            currentViewIndex = bottomSheetArray.count - 1
+            addViewInStack(bottomSheet: bottomSheet, index: currentViewIndex, animate: true)
+        case .collapsed:
+            isHideOverlay(bottomSheet: bottomSheet, isHide: false)
+        case .expended:
+            isHideOverlay(bottomSheet: bottomSheet, isHide: true)
+        case .closed:
+            dismissSheet(bottomSheet)
         }
     }
     
-    func removeOverLay(currentView:UIView) {
-        if let overLay = currentView.viewWithTag(overlayTag) {
-            overLay.removeFromSuperview()
-        }
-    }
-    
-    @IBAction func closeBottomSheet(_ sender: UIButton) {
-        dismiss()
-    }
-    
-    func dismiss() {
+    func dismissAll() {
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.view.frame = self?.dismisFrameValue() ?? .zero
             self?.backgroundView.backgroundColor = #colorLiteral(red: 0.1411764706, green: 0.2117647059, blue: 0.2823529412, alpha: 0)
         } completion: { [weak self] _ in
             
-            self?.currentViewIndex = 0
-            var decodedIndex = 0
-            
-            while let currentView = self?.self.view?.viewWithTag(((decodedIndex + 121) * 223)){
-                self?.removeOverLay(currentView: currentView)
-                    currentView.removeFromSuperview()
-                decodedIndex = decodedIndex + 1
+            while self?.bottomSheetArray.count != 0
+            {
+                if let bottomSheet = self?.bottomSheetArray.first{
+                    bottomSheet.state = .closed
+                    self?.updateUI(bottomSheet: bottomSheet)
+                }
             }
-            
-            self?.view.removeFromSuperview()
         }
     }
     
-    func dismissView(index:Int) {
+    //Dismiss Sheet
+    func dismissSheet(_ bottomSheet:UIBottomSheet) {
         
-        if decodeTag(encoded: index) != currentViewIndex {
-            return
+        var currentFrame = bottomSheet.view.frame
+        currentFrame.origin.y = self.view.frame.size.height
+        UIView.animate(withDuration: animationDuratioon) {
+            bottomSheet.view.frame = currentFrame
+        } completion: { [weak self] _ in
+            self?.removeOverlay(bottomSheet: bottomSheet)
+            bottomSheet.view.removeFromSuperview()
         }
         
-        if decodeTag(encoded: index) == 0 {
-            dismiss()
-        }
-        else{
-            if let currentView = self.view.viewWithTag(index){
-                var currentFrame = currentView.frame
-                currentFrame.origin.y = self.view.frame.size.height
-                UIView.animate(withDuration: animationDuratioon) {
-                    currentView.frame = currentFrame
-                } completion: { _ in
-                    self.removeOverLay(currentView: currentView)
-                    currentView.removeFromSuperview()
-                }
-                self.currentViewIndex = self.currentViewIndex - 1
-            }
-            
-            showOverLay(index: decodeTag(encoded: index) - 1)
+        bottomSheetArray.removeAll { (sheet) -> Bool in
+            return sheet.view.tag == bottomSheet.view.tag
         }
     }
     
     func expendViewOnTap(index:Int) {
-        var decodedIndex = decodeTag(encoded: index)
-        if decodedIndex == currentViewIndex {
+       var currentIndex = index % tagModifier
+         
+        if currentIndex == currentViewIndex {
             return
         }
         
-        showOverLay(index: decodedIndex)
-        
-        while let currentView = self.view.viewWithTag((((decodedIndex + 1) + 121) * 223)){
-            self.currentViewIndex = self.currentViewIndex - 1
-            var currentFrame = currentView.frame
-            currentFrame.origin.y = self.view.frame.size.height
-            UIView.animate(withDuration: animationDuratioon) {
-                currentView.frame = currentFrame
-            } completion: { _ in
-                self.removeOverLay(currentView: currentView)
-                currentView.removeFromSuperview()
-            }
-            decodedIndex = decodedIndex + 1
+        if bottomSheetArray.count > currentIndex {
+            bottomSheetArray[currentIndex].state = .expended
+            updateUI(bottomSheet: bottomSheetArray[currentIndex])
         }
+        
+        currentIndex = currentIndex + 1
+        
+        while currentIndex < bottomSheetArray.count {
+            if bottomSheetArray.count > currentIndex {
+                bottomSheetArray[currentIndex].state = .closed
+                updateUI(bottomSheet: bottomSheetArray[currentIndex])
+            }
+        }
+        
+        currentViewIndex = bottomSheetArray.count - 1
     }
     
     private func dismisFrameValue() -> CGRect {
@@ -263,7 +210,47 @@ class BottomSheetContainer: UIViewController {
     }
 }
 
-//MARK:- Down & Left Guesture
+//MARK:- Overlay WOrk
+extension BottomSheetContainer{
+    func addOverlay(bottomSheet:UIBottomSheet) {
+        //OverLay
+        let overlayView = UIView.init(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: bottomSheet.view.frame.size.height))
+        
+        overlayView.tag = 121 // OverlayTags
+        overlayView.backgroundColor = #colorLiteral(red: 0.1411764706, green: 0.2117647059, blue: 0.2823529412, alpha: 0.2)
+        overlayView.isHidden = true
+        
+        //UIImage
+        let expendImage = UIImageView.init(frame: CGRect.init(x: overlayView.frame.size.width - 40, y: (collapsedHeight - 20) / 2, width: 20, height: 20))
+        expendImage.image = UIImage(named: "expendIcon")
+        
+        overlayView.addSubview(expendImage)
+        bottomSheet.view.addSubview(overlayView)
+    }
+    
+    func removeOverlay(bottomSheet:UIBottomSheet) {
+        if let overlayView = bottomSheet.view.viewWithTag(overlayTag) {
+            overlayView.removeFromSuperview()
+        }
+    }
+    
+    func isHideOverlay(bottomSheet:UIBottomSheet,isHide:Bool) {
+        if let overlayView = bottomSheet.view.viewWithTag(overlayTag) {
+            overlayView.alpha = (isHide) ? 1 : 0
+            if !isHide {
+                overlayView.isHidden = isHide
+            }
+            
+            UIView.animate(withDuration: animationDuratioon) {
+                overlayView.alpha = (isHide) ? 0 : 1
+            } completion: { _ in
+                overlayView.isHidden = isHide
+            }
+        }
+    }
+}
+
+//MARK:- Down & Tap Guesture
 extension BottomSheetContainer
 {
     func addSwipe(view:UIView) {
@@ -272,27 +259,30 @@ extension BottomSheetContainer
         gesture.name = "\(view.tag)"
         view.addGestureRecognizer(gesture)
         
-        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
-        edgePan.edges = .right
-        edgePan.name = "\(view.tag)"
-        view.addGestureRecognizer(edgePan)
-        
         let tapGuesture = UITapGestureRecognizer(target: self, action: #selector(tapGuestureTrigger))
         tapGuesture.numberOfTouchesRequired = 1
         tapGuesture.name = "\(view.tag)"
         view.addGestureRecognizer(tapGuesture)
-        
     }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         if sender.direction == .down {
-            dismissView(index: Int(sender.name ?? "0")!)
-        }
-    }
-    
-    @objc func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
-        if recognizer.edges == .right {
-            dismiss()
+            
+            if currentViewIndex == 0 {
+                dismissAll()
+            }
+            else if let swipeIndex = Int(sender.name ?? "0") {
+                if swipeIndex % tagModifier == currentViewIndex && bottomSheetArray.count > currentViewIndex{
+                    let bottomSheetPrevious = bottomSheetArray[currentViewIndex - 1]
+                    bottomSheetPrevious.state = .expended
+                    updateUI(bottomSheet: bottomSheetPrevious)
+                    
+                    let bottomSheet = bottomSheetArray[currentViewIndex]
+                    bottomSheet.state = .closed
+                    updateUI(bottomSheet: bottomSheet)
+                    currentViewIndex = currentViewIndex - 1
+                }
+            }
         }
     }
     
@@ -301,14 +291,32 @@ extension BottomSheetContainer
     }
 }
 
-extension UIView{
-    func constraintWith(identifier: String) -> NSLayoutConstraint?{
-        return self.constraints.first(where: {$0.identifier == identifier})
-    }
-}
 //MARK:- BottomSheetDelegate 
 extension BottomSheetContainer : BottomSheetDelegate {
-    func nextBottomSheet(newBottomSheet: BottomSheetBase) {
+    
+    func present(newBottomSheet: UIBottomSheet) {
+        newBottomSheet.state = .launch
+        updateUI(bottomSheet: newBottomSheet)
+    }
+    
+    func dismiss() {
+        if bottomSheetArray.count > 0 && currentViewIndex == 0{
+            dismissAll()
+        }
+        else if bottomSheetArray.count > 0 {
+            // Dismised Last
+            if let bottomSheet = bottomSheetArray.last{
+                bottomSheet.state = .closed
+                updateUI(bottomSheet: bottomSheet)
+            }
+            
+            //Expend 2nd Last
+            currentViewIndex = currentViewIndex - 1
+            if let bottomSheet = bottomSheetArray.last{
+                bottomSheet.state = .expended
+                updateUI(bottomSheet: bottomSheet)
+            }
+        }
         
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookTicketController: BottomSheetBase {
+class BookTicketController: UIBottomSheet {
 
     // MARK: - Outlets
     
@@ -22,6 +22,7 @@ class BookTicketController: BottomSheetBase {
 
     // MARK: - Action Methods
     @IBAction func nextButtonAction(_ sender: Any) {
+        bottomSheetNavigation?.dismiss()
     }
     
 }

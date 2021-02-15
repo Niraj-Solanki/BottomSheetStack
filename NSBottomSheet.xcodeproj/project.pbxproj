@@ -21,7 +21,7 @@
 		4943FE7025DA8A9700B4C9F9 /* PavalionsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */; };
 		4943FE7425DA8AAC00B4C9F9 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */; };
 		4943FE7525DA8AAC00B4C9F9 /* BookTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */; };
-		4943FE7825DA8C6900B4C9F9 /* BottomSheetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */; };
+		4943FE7825DA8C6900B4C9F9 /* UIBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7725DA8C6900B4C9F9 /* UIBottomSheet.swift */; };
 		4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */; };
 		4943FE7D25DA8CAB00B4C9F9 /* BottomSheetContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */; };
 		4943FE8025DA907F00B4C9F9 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4943FE7F25DA907F00B4C9F9 /* Color.xcassets */; };
@@ -44,7 +44,7 @@
 		4943FE6E25DA8A9700B4C9F9 /* PavalionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PavalionsController.xib; sourceTree = "<group>"; };
 		4943FE7225DA8AAC00B4C9F9 /* BookTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
 		4943FE7325DA8AAC00B4C9F9 /* BookTicketController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTicketController.xib; sourceTree = "<group>"; };
-		4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetBase.swift; sourceTree = "<group>"; };
+		4943FE7725DA8C6900B4C9F9 /* UIBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBottomSheet.swift; sourceTree = "<group>"; };
 		4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
 		4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetContainer.xib; sourceTree = "<group>"; };
 		4943FE7F25DA907F00B4C9F9 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		4943FE5825DA871300B4C9F9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				4943FE7725DA8C6900B4C9F9 /* BottomSheetBase.swift */,
+				4943FE7725DA8C6900B4C9F9 /* UIBottomSheet.swift */,
 				4943FE7A25DA8CAB00B4C9F9 /* BottomSheetContainer.swift */,
 				4943FE7B25DA8CAB00B4C9F9 /* BottomSheetContainer.xib */,
 			);
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4943FE6425DA89A200B4C9F9 /* WorldExpoController.swift in Sources */,
-				4943FE7825DA8C6900B4C9F9 /* BottomSheetBase.swift in Sources */,
+				4943FE7825DA8C6900B4C9F9 /* UIBottomSheet.swift in Sources */,
 				4943FE6F25DA8A9700B4C9F9 /* PavalionsController.swift in Sources */,
 				4943FE4325DA86E100B4C9F9 /* AppDelegate.swift in Sources */,
 				4943FE7C25DA8CAB00B4C9F9 /* BottomSheetContainer.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PavalionsController: BottomSheetBase {
+class PavalionsController: UIBottomSheet {
 
     // MARK: - Outlets
     
@@ -22,6 +22,8 @@ class PavalionsController: BottomSheetBase {
 
     // MARK: - Action Methods
     @IBAction func nextButtonAction(_ sender: Any) {
+        let bookTicket = BookTicketController()
+        bottomSheetNavigation?.present(newBottomSheet: bookTicket)
     }
     
 }

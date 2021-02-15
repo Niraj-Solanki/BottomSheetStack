@@ -1,4 +1,4 @@
-# MasterClass
+# BottomSheetStack
 ## Overview
 Sample of BottomSheetStack
 

@@ -15,12 +15,21 @@ Swift:- 5.2
 
 <b>Note<b>:- Dummy Data is used for demonstration.
 
+
 ## Application Preview
+
+#### BottomSheetStack
+<img src="/Read%20Files/BottomSheetStack1.gif" width="246" height="537.6"> <img src="/Read%20Files/BottomSheetStack2.gif" width="246" height="537.6"> 
+
+#### Home Screen & BottomSheetStack -> UISBottomSheet
+<img src="/Read%20Files/0.png" width="246" height="537.6"> <img src="/Read%20Files/1.png" width="246" height="537.6"> <img src="/Read%20Files/2.png" width="246" height="537.6">
+<img src="/Read%20Files/3.png" width="246" height="537.6">
+<img src="/Read%20Files/4.png" width="246" height="537.6">
 
 
 ## Contact
 <b>Developer :- </b> Neeraj Solanki </br>
 </b>Profile :- </b> Senior iOS Engineer </br>
-</b>Website :- <b> <a href="https//neerajsolanki.xyz">Click Here</a> </br>
+</b>Website :- <b> <a href="https//www.neerajsolanki.xyz">Click Here</a> </br>
 </b>LinkedIn :- <b> <a href="https://www.linkedin.com/in/neerajsolanki/">Click Here</a>
 
